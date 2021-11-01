@@ -9,6 +9,7 @@ services:
   - type: web
     name: actioncable-test
     region: frankfurt
+    plan: free
     env: ruby
     healthCheckPath: /health
     buildCommand: "./bin/render-build.sh"
@@ -26,10 +27,10 @@ services:
   - type: pserv
     name: redis
     env: docker
+    plan: free
     region: frankfurt
     dockerfilePath: ./Dockerfile.redis
     disk:
       name: data
       mountPath: /var/lib/redis
       sizeGB: 10
-
