@@ -1,14 +1,12 @@
 previewsEnabled: true
 databases:
   - name: actioncable-testdb
-    region: oregon
     databaseName: actest
     user: actest
 
 services:
   - type: web
     name: actioncable-test
-    region: oregon
     env: ruby
     plan: free
     healthCheckPath: /health
@@ -27,7 +25,6 @@ services:
   - type: pserv
     name: redis
     env: docker
-    region: oregon
     dockerfilePath: ./Dockerfile.redis
     disk:
       name: data
