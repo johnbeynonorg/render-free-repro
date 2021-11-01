@@ -28,6 +28,7 @@ services:
   - type: pserv
     name: redis
     env: docker
+    region: frankfurt
     dockerfilePath: ./Dockerfile.redis
     disk:
       name: data
