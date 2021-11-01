@@ -21,8 +21,6 @@ services:
         fromDatabase:
           name: actioncable-testdb
           property: connectionString
-      - key: REDIS_URL
-        value: redis://redis-3ocl:10000
       - key: SECRET_KEY_BASE
         generateValue: true
   - type: pserv
